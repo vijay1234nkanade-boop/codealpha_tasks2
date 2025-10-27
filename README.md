@@ -1,104 +1,81 @@
-Skip to content
-Navigation Menu
-vijay1234nkanade-boop
-codealpha_tasks2
+# Disease Prediction from Symptoms
 
-Type / to search
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Files
-Go to file
-t
-Disease Prediction from Medical Data
-codealpha_tasks2
-/Disease Prediction from Medical Data
-vijay1234nkanade-boop
-vijay1234nkanade-boop
-Create Disease Prediction from Medical Data
-a890b2a
- · 
-4 minutes ago
+This project explores the use of machine learning algorithms to predict diseases from symptoms. 
 
-Code
+### Algorithms Explored
 
-Blame
-71 lines (48 loc) · 1.58 KB
-# 💳 Credit Score Prediction
+The following algorithms have been explored in code:
 
-This project predicts a person's **credit score category** (Good, Standard, or Poor) using **machine learning** based on their past financial data.
+1. Naive Bayes
+2. Decision Tree
+3. Random Forest
+4. Gradient Boosting
 
----
+# Dataset
 
-## 📘 Project Description
+### Source-1
 
-Credit scoring is an important task for banks and financial institutions.  
-It helps in determining whether a customer is eligible for a loan or credit card based on their repayment behavior and financial history.
+The dataset for this problem used with the `main.py` script is downloaded from here:
 
-This project uses **Python and Machine Learning algorithms** to predict the credit score of a customer using input features such as:
-- Annual Income  
-- Loan Amount  
-- Number of Bank Accounts  
-- Number of Credit Cards  
-- Delay from Due Date  
-- Outstanding Debt  
-- Monthly Balance  
+```
+https://www.kaggle.com/kaushil268/disease-prediction-using-machine-learning
+```
 
----
+This dataset has 133 total columns, 132 of them being symptoms experienced by patiend and last column in prognosis for the same.
 
-## ⚙️ Technologies Used
+### Source-2
+The dataset for this problem used with the Jupyter notebook is downloaded from here: 
+```
+https://impact.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html
+```
 
-- **Python 3**
-- **Pandas**
-- **NumPy**
-- **Matplotlib**
-- **Seaborn**
-- **Scikit-learn**
-- **Jupyter Notebook**
+This dataset has 3 columns:
+```
+Disease  | Count of Disease Occurrence | Symptom
+```
 
----
+You can either copy paste the whole table from here to an excel sheet or scrape it out using Beautifulsoup.
 
-## 🧠 Machine Learning Model Used
+# Directory Structure
 
-We have trained and compared multiple models:
-- Logistic Regression  
-- Decision Tree Classifier  
-- Random Forest Classifier  
+```
+|_ dataset/
+         |_ training_data.csv
+         |_ test_data.csv
 
-The **Random Forest Classifier** gave the best accuracy in our case.
+|_ saved_model/
+         |_ [ pre-trained models ]
 
----
+|_ main.py [ code for laoding kaggle dataset, training & saving the model]
 
-## 🧩 Dataset Information
+|_ notebook/
+         |_ dataset/
+                  |_ raw_data.xlsx [Columbia dataset for notebook]
+         |_ Disease-Prediction-from-Symptoms-checkpoint.ipynb [ IPython Notebook for loading Columbia dataset, training model and Inference ]
+```
 
----
+# Usage
 
-## 🚀 How to Run This Project
+Please make sure to install all dependencies before running the demo, using the following:
 
-1. Clone this repository  
-2. Open the folder in **VS Code** or **Jupyter Notebook**  
-3. Install dependencies  
-4. Run the Jupyter Notebook  
-5. Open the file `editproject.ipynb` and execute all cells.
+```
+pip install -r requirements.txt
+```
 
----
+## Interactive Demo
 
-## 📊 Output Example
+For running an interactive demo or sharing it with others, please run `demo.py` using Jupyter Notebook or Jupyter Lab.
 
-The program will display:
-- The accuracy of each ML model  
-- Confusion matrix  
-- Graphs comparing model performance  
-- Predicted Credit Score category for input data
+```
+jupyter notebook demo.ipynb
+```
 
----
+## Standalone Demo
 
+For running the inference on test set or on custom inputs, you can also use the `infr.py` file as follows:
 
-# credit-score-prediction
-codealpha_tasks2/Disease Prediction from Medical Data at main · vijay1234nkanade-boop/codealpha_tasks2
+```
+python infer.py
+```
+
+**NOTE:** ***This project is for demo purposes only. For any symptoms/disease, please refer to a Doctor.***
